@@ -180,7 +180,7 @@ class ConfluenceBuildVersions(object):
             for environment_name, entries in environment.iteritems():
 
                 rows = ''
-                entries = sorted(entries, key=itemgetter('Date'), reverse=True)
+                entries = sorted(entries, key=itemgetter('Date'), reverse=True)  ## Well this doesn't sort dates properly (Why didn't you check that?, hmm)
 
                 for row in entries[:10]:
                     rows += self.__TEMPLATE_TABLE_ROW.format(
